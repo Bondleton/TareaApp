@@ -10,12 +10,12 @@ interface Tarea {
 }
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-inicio',
   standalone: false,
+  templateUrl: './inicio.page.html',
+  styleUrls: ['./inicio.page.scss'],
 })
-export class HomePage implements OnInit{
+export class InicioPage implements OnInit {
 
   tareas: Tarea[] = [];
 
@@ -43,5 +43,6 @@ export class HomePage implements OnInit{
   irADetalles(id: number) {
     this.router.navigate([`/tarea-detalles`, id]);
   }
+
 
 }

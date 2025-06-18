@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Crear Tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form (ngSubmit)="guardarTarea()">
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input [(ngModel)]="tarea.titulo" name="titulo" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea [(ngModel)]="tarea.descripcion" name="descripcion" required></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha de Vencimiento</ion-label>
+      <ion-datetime [(ngModel)]="tarea.fecha" name="fecha" presentation="date" required></ion-datetime>
+    </ion-item>
+
+    <!-- <ion-datetime-button datetime="datetime"></ion-datetime-button> -->
+
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+
+    <ion-button expand="block" type="submit">Guardar tarea</ion-button>
+    <ion-button expand="block" color="medium" (click)="cancelar()">Cancelar</ion-button>
+  </form>
+</ion-content>
