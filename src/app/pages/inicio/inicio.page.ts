@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 
 
 interface Tarea {
-  id: number;
-  titulo: string;
+  id: string;
+  nombre: string;
   descripcion: string;
   fecha: string;
 }

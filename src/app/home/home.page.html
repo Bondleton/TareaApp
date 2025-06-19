@@ -13,11 +13,15 @@
   <ion-list *ngIf="tareas.length > 0; else sinTareas">
     <ion-item *ngFor="let tarea of tareas" (click)="irADetalles(tarea.id)">
       <ion-label>
-        <h2>{{ tarea.titulo }}</h2>
+        <h1>{{ tarea.nombre }}</h1>
         <p>{{ tarea.descripcion }}</p>
         <p><strong>Vence:</strong> {{ tarea.fecha | date }}</p>
       </ion-label>
+      <ion-button color="danger" fill="clear" slot="end" (click)="eliminarTarea(tarea.id)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
     </ion-item>
+
   </ion-list>
 
   <ng-template #sinTareas>

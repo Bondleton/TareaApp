@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
@@ -11,7 +11,7 @@ import { AlertController } from '@ionic/angular';
 export class TareaPage {
 
   tarea = {
-    titulo: '',
+    nombre: '',
     descripcion: '',
     fecha: ''
   };
@@ -22,16 +22,15 @@ export class TareaPage {
   ) { }
 
   async guardarTarea() {
-    const { titulo, descripcion, fecha } = this.tarea;
+    const { nombre, descripcion, fecha } = this.tarea;
 
-    if (!titulo || !descripcion || !fecha) {
+    if (!nombre || !descripcion || !fecha) {
       this.mostrarAlerta('Todos los campos son obligatorios.');
       return;
     }
 
     const fechaSeleccionada = new Date(fecha);
     const hoy = new Date();
-
     if (fechaSeleccionada <= hoy) {
       this.mostrarAlerta('La fecha de vencimiento debe ser futura.');
       return;
@@ -39,8 +38,8 @@ export class TareaPage {
 
     const tareas = JSON.parse(localStorage.getItem('tareas') || '[]');
     const nuevaTarea = {
-      id: Date.now(),
-      ...this.tarea
+      id: Date.now().toString(), // ID como string
+      ...this.tarea              // incluye nombre, descripción y fecha
     };
 
     tareas.push(nuevaTarea);
@@ -60,5 +59,4 @@ export class TareaPage {
   cancelar() {
     this.router.navigate(['/home']);
   }
-
 }

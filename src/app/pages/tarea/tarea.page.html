@@ -2,7 +2,7 @@
   <ion-toolbar>
 
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+      <ion-back-button defaultHref="/" color="medium"></ion-back-button>
     </ion-buttons>
 
     <ion-title>Crear Tarea</ion-title>
@@ -14,7 +14,7 @@
   <form (ngSubmit)="guardarTarea()">
     <ion-item>
       <ion-label position="floating">Título</ion-label>
-      <ion-input [(ngModel)]="tarea.titulo" name="titulo" required></ion-input>
+      <ion-input [(ngModel)]="tarea.nombre" name="titulo" required></ion-input>
     </ion-item>
 
     <ion-item>
@@ -23,11 +23,9 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Fecha de Vencimiento</ion-label>
+      <ion-label class="Texto-fecha" position="floating">Fecha de Vencimiento</ion-label>
       <ion-datetime [(ngModel)]="tarea.fecha" name="fecha" presentation="date" required></ion-datetime>
     </ion-item>
-
-    <!-- <ion-datetime-button datetime="datetime"></ion-datetime-button> -->
 
     <ion-modal [keepContentsMounted]="true">
       <ng-template>

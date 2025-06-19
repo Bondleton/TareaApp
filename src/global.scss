@@ -35,3 +35,290 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+/* Estilos generales de la aplicación */
+// :root {
+//   --ion-color-primary: #a5d6a7;
+//   /* Verde pastel */
+//   --ion-color-primary-rgb: 165, 214, 167;
+//   --ion-color-primary-contrast: #2e7d32;
+//   --ion-color-primary-contrast-rgb: 46, 125, 50;
+//   --ion-color-primary-shade: #91bc93;
+//   --ion-color-primary-tint: #aedab0;
+
+//   --ion-color-secondary: #80deea;
+//   /* Azul claro pastel */
+//   --ion-color-secondary-rgb: 128, 222, 234;
+//   --ion-color-secondary-contrast: #00838f;
+//   --ion-color-secondary-contrast-rgb: 0, 131, 143;
+//   --ion-color-secondary-shade: #71c3ce;
+//   --ion-color-secondary-tint: #8de1ec;
+
+//   --ion-color-tertiary: #ce93d8;
+//   /* Lila pastel */
+//   --ion-color-tertiary-rgb: 206, 147, 216;
+//   --ion-color-tertiary-contrast: #6a1b9a;
+//   --ion-color-tertiary-contrast-rgb: 106, 27, 154;
+//   --ion-color-tertiary-shade: #b581c2;
+//   --ion-color-tertiary-tint: #d39edc;
+
+//   --ion-color-success: #81c784;
+//   /* Verde éxito pastel */
+//   --ion-color-warning: #ffd54f;
+//   /* Amarillo pastel */
+//   --ion-color-danger: #ff8a80;
+//   /* Rojo pastel */
+//   --ion-color-light: #f5f5f5;
+//   /* Gris muy claro */
+//   --ion-color-medium: #bdbdbd;
+//   /* Gris medio */
+//   --ion-color-dark: #424242;
+//   /* Gris oscuro */
+// }
+
+// /* Estilo para el contenido */
+// // ion-content {
+// //   --background: #fafafa;
+// //   /* Fondo muy claro */
+// // }
+
+// /* Estilo para la barra de herramientas */
+// ion-toolbar {
+//   --background: #a5d6a7;
+//   /* Verde pastel */
+//   --color: #2e7d32;
+//   /* Texto en verde oscuro */
+// }
+
+// /* Estilo para los botones */
+// ion-button {
+//   --border-radius: 12px;
+//   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   margin: 16px 0;
+// }
+
+// /* Estilo para la lista de tareas */
+// ion-list {
+//   background: transparent;
+//   margin-top: 16px;
+// }
+
+// ion-item {
+//   --background: #ffffff;
+//   --border-radius: 12px;
+//   --padding-start: 16px;
+//   --padding-end: 16px;
+//   margin-bottom: 12px;
+//   border-left: 6px solid var(--ion-color-primary);
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+//   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+//   &:hover {
+//     transform: translateY(-2px);
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   }
+// }
+
+// /* Estilo para los elementos de la lista */
+// ion-label {
+//   h2 {
+//     color: #424242;
+//     font-weight: 600;
+//     margin-bottom: 4px;
+//   }
+
+//   p {
+//     color: #616161;
+//     font-size: 0.9em;
+//     margin-top: 4px;
+//     margin-bottom: 4px;
+//   }
+
+//   p:last-child {
+//     color: var(--ion-color-primary);
+//     font-weight: 500;
+//   }
+// }
+
+// /* Estilo para el mensaje cuando no hay tareas */
+// ion-text[color="medium"] {
+//   text-align: center;
+//   display: block;
+//   margin-top: 32px;
+//   color: #9e9e9e;
+//   font-style: italic;
+// }
+
+// /* Efectos especiales */
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     transform: translateY(10px);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// ion-item {
+//   animation: fadeIn 0.3s ease forwards;
+//   opacity: 0;
+
+//   @for $i from 1 through 10 {
+//     &:nth-child(#{$i}) {
+//       animation-delay: $i * 0.1s;
+//     }
+//   }
+// }
+
+
+/* src/theme/variables.scss */
+/* Puedes agregar esto al final del archivo */
+
+/* Paleta de colores Dark Mode */
+:root {
+  --ion-color-primary: #6a1b9a;
+  /* Morado oscuro */
+  --ion-color-primary-rgb: 106, 27, 154;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #5d1888;
+  --ion-color-primary-tint: #7932a4;
+
+  --ion-color-secondary: #bb86fc;
+  /* Morado claro */
+  --ion-color-secondary-rgb: 187, 134, 252;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #a576e0;
+  --ion-color-secondary-tint: #c292fc;
+
+  --ion-color-tertiary: #FF8A65;
+  /* Coral/Salmón */
+  --ion-color-tertiary-rgb: 255, 138, 101;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #e07959;
+  --ion-color-tertiary-tint: #ff9674;
+
+  --ion-color-dark: #1E1E1E;
+  /* Fondo oscuro */
+  --ion-color-dark-rgb: 18, 18, 18;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #101010;
+  --ion-color-dark-tint: #2a2a2a;
+
+  --ion-color-medium: #121212;
+  /* Gris oscuro */
+  --ion-color-medium-rgb: 30, 30, 30;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #1a1a1a;
+  --ion-color-medium-tint: #353535;
+
+  --ion-color-light: #2a2a2a;
+  /* Gris claro */
+  --ion-color-light-rgb: 42, 42, 42;
+  --ion-color-light-contrast: #ffffff;
+  --ion-color-light-contrast-rgb: 255, 255, 255;
+  --ion-color-light-shade: #252525;
+  --ion-color-light-tint: #3f3f3f;
+}
+
+/* Estilos globales */
+ion-content {
+  --background: var(--ion-color-dark);
+  --color: #ffffff;
+}
+
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-primary-contrast);
+}
+
+ion-list {
+  background: transparent;
+}
+
+ion-item {
+  --background: var(--ion-color-medium);
+  /* Esto establece el fondo oscuro (#1e1e1e) */
+  --color: #ffffff;
+  /* Texto blanco */
+  --border-color: var(--ion-color-light);
+  /* Borde más claro */
+  margin-bottom: 8px;
+  border-radius: 8px;
+  /* Esquinas redondeadas */
+}
+
+ion-button {
+  --border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* Estilo para el botón de nueva tarea */
+ion-button[color="primary"] {
+  --background: var(--ion-color-secondary);
+  --color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Estilo para el texto cuando no hay tareas */
+ion-text[color="medium"] {
+  --color: var(--ion-color-secondary);
+  text-align: center;
+  display: block;
+  margin-top: 32px;
+  font-style: italic;
+}
+
+
+/* Efecto hover para los items */
+ion-item:hover {
+  --background: var(--ion-color-light);
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Sombras y efectos */
+ion-list {
+  ion-item {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Estilo para los títulos */
+h1 {
+  color: var(--ion-color-secondary);
+  // font-weight: 800;
+  font-weight: bold;
+}
+
+/* Estilo para las fechas */
+p strong {
+  color: var(--ion-color-tertiary);
+}
+
+/* Animación para cuando se agrega una nueva tarea */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ion-item {
+  animation: fadeIn 0.3s ease-out;
+}

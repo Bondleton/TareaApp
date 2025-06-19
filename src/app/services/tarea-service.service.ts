@@ -33,4 +33,10 @@ export class TareaServiceService {
       localStorage.setItem(this.storageKey, JSON.stringify(tareas));
     }
   }
+
+  eliminarTarea(id: string): void {
+    const tareas = this.obtenerTareas();
+    const tareasActualizadas = tareas.filter(t => t.id !== id);
+    localStorage.setItem(this.storageKey, JSON.stringify(tareasActualizadas));
+  }
 }

@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TareaServiceService } from 'src/app/services/tarea-service.service';
 
 interface Tarea {
-  id: string;
+ id: string;
   nombre: string;
   descripcion: string;
   fecha: string;

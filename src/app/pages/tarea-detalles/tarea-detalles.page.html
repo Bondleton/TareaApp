@@ -16,9 +16,9 @@
   </ion-item>
 
   <ion-item>
-    <ion-label position="stacked">Fecha de vencimiento</ion-label>
+    <ion-label position="stacked" class="Texto-fecha"> Fecha de vencimiento</ion-label>
     <ion-datetime display-format="YYYY-MM-DD" [(ngModel)]="tarea.fecha"></ion-datetime>
   </ion-item>
 
-  <ion-button expand="full" color="primary" (click)="guardarCambios()">Guardar Cambios</ion-button>
+  <ion-button expand="block" color="primary" (click)="guardarCambios()">Guardar Cambios</ion-button>
 </ion-content>

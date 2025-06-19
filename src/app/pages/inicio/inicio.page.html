@@ -10,26 +10,4 @@
     + Nueva Tarea
   </ion-button>
 
-  <ion-list *ngIf="tareas.length > 0; else sinTareas">
-    <ion-item *ngFor="let tarea of tareas" (click)="irADetalles(tarea.id)">
-      <ion-label>
-        <h2>{{ tarea.titulo }}</h2>
-        <p>{{ tarea.descripcion }}</p>
-        <p><strong>Vence:</strong> {{ tarea.fecha | date }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
-
-  <ng-template #sinTareas>
-    <ion-text color="medium">
-      <p>No hay tareas registradas.</p>
-    </ion-text>
-  </ng-template>
-
-  <ion-button routerLink="/tareas">
-    Click me
-  </ion-button>
-
-
-
 </ion-content>
